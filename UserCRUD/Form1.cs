@@ -20,14 +20,14 @@ namespace UserCRUD
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
-            getUsers();
+            await getUsers();
             
             dataGridView1.DataSource = users;
         }
 
-        private async void getUsers()
+        private async Task getUsers()
         {
             HttpClient client = new HttpClient();
             HttpResponseMessage response = await client.GetAsync(baseURL);

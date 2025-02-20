@@ -17,14 +17,7 @@ namespace UserCRUD
 
     public partial class User
     {
-        [JsonProperty(" id ", NullValueHandling = NullValueHandling.Ignore)]
-        public long? Id { get; set; }
-
-        [JsonProperty(" nev ", NullValueHandling = NullValueHandling.Ignore)]
-        public string Nev { get; set; }
-
-        [JsonProperty(" fizetes ", NullValueHandling = NullValueHandling.Ignore)]
-        public long? Fizetes { get; set; }
+        
 
         [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
         public long? UserId { get; set; }
